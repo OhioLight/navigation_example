@@ -66,7 +66,7 @@ class DetailScreens extends StatelessWidget {
                   onPressed: () {
                     Navigator.pop(context);
                   },
-                  child: const Text('Back')),
+                  child: const Text('Zurück zum Homescreen')),
             ],
           ),
         ),
