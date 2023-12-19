@@ -10,13 +10,14 @@ class ProductList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
       child: ListView(
         shrinkWrap: true,
         children: products.map(
           (product) {
             return Card(
-              child: ElevatedButton(
+              child: TextButton(
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -30,9 +31,9 @@ class ProductList extends StatelessWidget {
                   );
                 },
                 child: ListTile(
-                  leading: const Icon(Icons.shopping_cart),
+                  leading: const Icon(Icons.shopping_cart_outlined),
                   title: Text(product.name),
-                  subtitle: Text('${product.price}€'),
+                  trailing: Text('${product.price}€'),
                 ),
               ),
             );
