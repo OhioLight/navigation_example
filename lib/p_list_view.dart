@@ -17,6 +17,7 @@ class ProductList extends StatelessWidget {
         children: products.map(
           (product) {
             return Card(
+              color: const Color.fromARGB(255, 54, 54, 54),
               child: TextButton(
                 onPressed: () {
                   Navigator.push(
@@ -31,9 +32,19 @@ class ProductList extends StatelessWidget {
                   );
                 },
                 child: ListTile(
-                  leading: const Icon(Icons.shopping_cart_outlined),
-                  title: Text(product.name),
-                  trailing: Text('${product.price}€'),
+                  leading: const Icon(Icons.shopping_cart_outlined,
+                      color: Colors.white),
+                  title: Text(
+                    product.name,
+                    style: const TextStyle(color: Colors.white, fontSize: 20),
+                  ),
+                  trailing: Text(
+                    '${product.price}€',
+                    style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontStyle: FontStyle.italic),
+                  ),
                 ),
               ),
             );

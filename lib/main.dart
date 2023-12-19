@@ -25,7 +25,7 @@ class MainApp extends StatelessWidget {
           ),
           backgroundColor: const Color.fromARGB(255, 54, 54, 54),
         ),
-        body: const ProductList(),
+        body: const SafeArea(child: ProductList()),
       ),
     );
   }
