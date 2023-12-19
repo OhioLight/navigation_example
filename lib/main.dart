@@ -26,31 +26,7 @@ class MainApp extends StatelessWidget {
           backgroundColor: const Color.fromARGB(255, 54, 54, 54),
         ),
         body: const ProductList(),
-        //floatingActionButton: const CustomFloatingBtn(),
       ),
     );
   }
 }
-
-/*class CustomFloatingBtn extends StatelessWidget {
-  const CustomFloatingBtn({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return FloatingActionButton(
-      backgroundColor: const Color.fromARGB(255, 54, 54, 54),
-      onPressed: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => const DetailScreens(),
-          ),
-        );
-      },
-      child: const Icon(
-        Icons.accessibility_new,
-        color: Colors.white,
-      ),
-    );
-  }
-}*/

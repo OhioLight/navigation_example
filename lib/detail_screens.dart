@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:navigation_example/prudukt_class.dart';
 
 class DetailScreens extends StatelessWidget {
   const DetailScreens({
