@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:navigation_example/detail_screens.dart';
+
+import 'package:navigation_example/p_list_view.dart';
 
 void main() {
   runApp(const MainApp());
@@ -12,34 +13,44 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: Colors.black,
         appBar: AppBar(
-          title: const Text('TodoApp'),
+          centerTitle: false,
+          titleTextStyle: const TextStyle(
+            fontSize: 24,
+            color: Colors.white,
+          ),
+          title: const Text(
+            'Produkte',
+          ),
+          backgroundColor: const Color.fromARGB(255, 54, 54, 54),
         ),
-        body: const CustomElevatedButton(),
+        body: const ProductList(),
+        //floatingActionButton: const CustomFloatingBtn(),
       ),
     );
   }
 }
 
-class CustomElevatedButton extends StatelessWidget {
-  const CustomElevatedButton({super.key});
+/*class CustomFloatingBtn extends StatelessWidget {
+  const CustomFloatingBtn({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: ElevatedButton(
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => const DetailScreens(
-                buttonText: 'Back jdfjn ',
-              ),
-            ),
-          );
-        },
-        child: const Text('Navigate'),
+    return FloatingActionButton(
+      backgroundColor: const Color.fromARGB(255, 54, 54, 54),
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const DetailScreens(),
+          ),
+        );
+      },
+      child: const Icon(
+        Icons.accessibility_new,
+        color: Colors.white,
       ),
     );
   }
-}
+}*/
